@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: kafka-file-consumer
+  cloud:
+    stream:
+      bindings:
+        processFile-in-0:
+          destination: topic-1
+      kafka:
+        binder:
+          brokers: 127.0.0.1
+          defaultBrokerPort: 9092

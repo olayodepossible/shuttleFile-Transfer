@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: kafka-file-producer
+  cloud:
+    stream:
+      bindings:
+        processFile-in-0:
+          destination: topic-1
+      kafka:
+        binder:
+          brokers: 127.0.0.1
+          defaultBrokerPort: 9092
+server:
+  port: 8085
